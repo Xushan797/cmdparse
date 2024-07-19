@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+# File is named .txt to shellcheck does not mangle the purposely bad input
+
+
+# Simple command (though, `set` is actually a Bash builtin, if we're being pedantic)
+set -euo pipefail
+
+
+# FIXME(pbar): This is the only one that behaves semi-wrong. It extracts both of these,
+# whereas it should only extract the inner command within the process substitution:
+#   stringified command
+#  "$(stringified command)"
+# Commands in both the conditional and inner blocks of an if statement
+if conditional_command --withflags; then
+  echo inside-if
+elif "$(stringified command)"; then
+  echo inside-elif > file_that_should_not_show_up
+fi
+
+
+# More control flow embeddings
+for x in $(cat foobarfile.txt); do
+  echo inside-for &| tee teed_file.txt
+done
+
+
+# Command containing a quoted redirect
+grep "foo &&" file.txt >> $(hostname).txt
+
+
+# Redirect as part of what looks like one string, but not really
+echo hi&&echo bar
+
+
+# Embedded Bash command that needs to be unwrapped
+bash -c "grep 'hello there &&' myfile.txt"
+
+
+# Multiline string literal inside single quotes with no escaping
+rg '
+    some text literal
+'
+
+
+# Multiline command with backslash-escaped newlines
+my \
+  --multiline \
+  command
+
+
+# Extremely nested bash command with a tricky command that looks like it might
+# need to be unwrapped, but it really should not be
+bash -c 'bash -c "bash -c \"kubectl exec -it -- bash -c thisisfine\"" || somethingelse --that shouldshowup'
+
+
+# Expected output of `cmdparse --clean example.txt`:
+#   set -euo pipefail
+#   conditional_command --withflags
+#   echo inside-if
+#   stringified command
+#   '$(stringified command)'   <---------- This is the only one that is not intended
+#   echo inside-elif
+#   cat foobarfile.txt
+#   echo inside-for
+#   tee teed_file.txt
+#   grep 'foo &&' file.txt
+#   hostname
+#   echo hi
+#   echo bar
+#   grep 'hello there &&' myfile.txt
+#   rg '
+#       some text literal
+#   '
+#   my --multiline command
+#   kubectl exec -it -- bash -c thisisfine
+#   somethingelse --that shouldshowup
