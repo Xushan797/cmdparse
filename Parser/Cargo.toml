@@ -1,0 +1,11 @@
+[package]
+name = "cmdparse"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+clap = { version = "4.5.9", features = ["derive"] }
+shlex = "1.3.0"
+tree-sitter = "0.22.6"
+tree-sitter-bash = "0.21.0"

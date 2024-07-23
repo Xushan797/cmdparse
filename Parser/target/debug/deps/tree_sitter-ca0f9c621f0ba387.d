@@ -1,0 +1,14 @@
+/workspaces/cmdparse/target/debug/deps/libtree_sitter-ca0f9c621f0ba387.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/ffi.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/util.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./README.md /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./bindings.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/array.h /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/parser.h /workspaces/cmdparse/target/debug/build/tree-sitter-1c96cda4a6335151/out/stdlib-symbols.txt
+
+/workspaces/cmdparse/target/debug/deps/tree_sitter-ca0f9c621f0ba387.d: /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/ffi.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/util.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./README.md /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./bindings.rs /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/array.h /home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/parser.h /workspaces/cmdparse/target/debug/build/tree-sitter-1c96cda4a6335151/out/stdlib-symbols.txt
+
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/ffi.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/util.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./README.md:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/./bindings.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/array.h:
+/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tree-sitter-0.22.6/binding_rust/../src/parser.h:
+/workspaces/cmdparse/target/debug/build/tree-sitter-1c96cda4a6335151/out/stdlib-symbols.txt:
+
+# env-dep:OUT_DIR=/workspaces/cmdparse/target/debug/build/tree-sitter-1c96cda4a6335151/out

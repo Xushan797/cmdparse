@@ -30,6 +30,7 @@ fn main() -> Result<()> {
     }
 
     let mut commands = parse_and_extract_commands(&code)?;
+    println!("parsed commands {:?}", commands);
     let mut final_commands = Vec::new();
 
     while let Some(command) = commands.pop() {
@@ -60,6 +61,7 @@ fn parse_and_extract_commands(code: &str) -> Result<Vec<String>> {
     let tree = parser
         .parse(&code, None)
         .context("failed to parse bash code")?;
+    println!("tree looks like: {:?}", tree);
     let root_node = tree.root_node();
 
     let commands = extract_commands(root_node, code);

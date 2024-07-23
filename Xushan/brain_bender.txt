@@ -1,0 +1,14 @@
+# This should extract into 10 commands cmd1 through cmd10
+cmd1&&cmd2||cmd3;{cmd4;{cmd5;cmd6;}}if ! cmd7;then cmd8;fi|cmd9|&cmd10
+
+# Expected output of `cmdparse --clean brain_bender.txt`:
+#   cmd1
+#   cmd2
+#   cmd3
+#   cmd4
+#   cmd5
+#   cmd6
+#   cmd7
+#   cmd8
+#   cmd9
+#   cmd10
